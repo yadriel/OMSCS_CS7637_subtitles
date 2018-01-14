@@ -1,0 +1,84 @@
+01 - Preview.txt
+In this lesson, we'll talk most specifically about what you should expect from CS. We'll start by talking about the learning goals, the learning outcomes, and the learning strategies that we'll use for this class. Then we'll discuss the class projects and assessments. That will lead us to talking about something called Computational Psychometrics, which is one of the multi-weighting principles behind the projects in this class. Next we'll talk about the Raven's Progressive Matrices test of intelligence. I think you're going to find it fascinating. The Raven's Progressive Matrices test of intelligence are the most commonly used tests of human intelligence. And that test was the target of the projects in this class. Very ambitious, you're going to enjoy it. FInally we'll discuss something commonly reoccuring principle in this class and you should be on the lookout for them. 
+
+
+02 - Class Goals.txt
+There are four major learning goals for this class. First, you'll learn about the core methods of knowledge-based AI. These methods include schemes for structured knowledge representation, methods for memory organization, methods for reasoning, methods for learning, [UNKNOWN] architectures as well as methods for meta reasoning. Meta reasoning is reasoning about reasoning. Second, you learn about some of the common tasks addressed by knowledge-based AI, such as classification, understanding, planning, explanation, diagnosis, and design. Third, you will learn ways AI agents can use these methods to address these tasks. Fourth, you learn the relationship between the knowledge-based AI cognitive science. Using theories of human cognition to inspire their design of human level, human-like AI and using AI techniques to generate testable hypothesis about human cognition. 
+
+
+03 - Class Outcomes.txt
+What are the learning outcomes of this course? At the conclusion of this class, you will be able to do three primary things. First, you'll be able to design, implement and evaluate and describe knowledge-based AIs. The design and description of knowledge-based AI agent is really the first learning goal. In order to be able to design an agent, you need knowledge of the methods of knowledge-based AI. Second, you will also be able to use these strategies to address practical problems. This learning outcome addresses the second learning goal, where you will be able to [INAUDIBLE] the relationship between AI agents and real world problems. Third, you'll also be able to use the design of knowledge-based AI agents to reflect on human cognition and vice versa. This addresses the fourth learning goal. 
+
+
+04 - Class Strategies.txt
+In this class we'll use five main learning strategies. First, Learning by Example. Almost every lesson of this class starts with an example of the type of reasoning we want you to learn. The example that runs throughout the lesson, could demonstrate that reasoning. Second, Learning by Doing. In most lessons, the lesson will end with a multi-part exercise, where you are doing the exact reasoning that you learned in that lesson. There's first you see an example, then you do a similar example yourself. Third, Project-Based Learning. The class is largely structured around a series of challenging projects. And you will frequently be asked to relate each lesson you learn, to the projects in the class. Personalized learning. Personalization permeates throughout this course. You can watch the lessons in any order you choose, and at your own pace. You can choose which concepts to focus on, and everything the assignments. You'll receive personal feedback on every exercise throughout the course. Fifth, Learning by Reflection. At the conclusion of each lesson, you'll be asked to reflect on what you learned in that particular lesson. At the conclusion of each project, you'll write a designed report that will reflect on the experiments that you did as part of the project. We'll also use other learning strategies as needed, such as collaborative learning. 
+
+
+05 - Introduction to Computational Psychometrics.txt
+Let us talk about Computational Psychometrics a little bit. Psychometrics itself is a study of human intelligence, of human aptitude, of human knowledge. Computational Psychometrics for our purposes, is the design of computational agents that can take the same kind of tests that humans do, when they are tested for intelligence or knowledge or aptitude. Imagine that you design an AI agent that can take an intelligence test. After designing it, you might want to analyze how well does it do compared to the humans on that test? You might also want to compare the errors it makes with the errors that humans make. If it does as well as humans do and if its behavior, its errors are the same as those of humans, you might conjecture then that perhaps its reasoning mirrors that of humans. In this class, we are going to be designing AI agents that can take the Raven's Test of Intelligence. In the process, we will want to use this agents to reflect on how humans might be addressing the same intelligence tests. 
+
+
+06 - Ravens Progressive Matrices.txt
+The class projects will be based on the Raven's Progressive Matrices test of intelligence. This test was written in the s to examine general human intelligence. It consists of multiple-choice visual analogy problems. The Raven's test is unique among intelligence test in that all problems in the Raven's test are strictly visual. No words. It is the most widespread, the most commonly used, the most reliable test of intelligence. The Raven's test consists of two kinds of problems, two by two matrix problems and three by three matrix problems. We'll also consider a special case of two by one matrix problems. They're not part of the original test. But they will providing a baseline for starting to construct AI agents. Your project will be to implement AI agents that can solve problems like those that appear in the Raven's Test of Intelligence. Let's look at a few sample problems right now. 
+
+
+07 - 2x1 Matrices I.txt
+Let us consider an example. We are shown initially three images, A, B and C. And you have to pick a candidate for the D image here on the top right. And it can be one of these six candidates that would go here in the D image. Given that A is to B, as C is to D, what would you pick among the six choices at the bottom to put into D? 
+
+
+08 - 2x1 Matrices II.txt
+The previous problem was pretty simple. Let's try a slightly harder problem. Once again, we're given A, B, C, and D. Given that A is to B, what would we pick between , , , , , and to put into D? 
+
+
+09 - 2x1 Matrices III.txt
+Let's try an even harder problem. And as you solve this problem, think a little bit about how do you go about solving it. 
+
+
+10 - 2x1 Matrices IV.txt
+I like this problem. This one is really interesting. Everyone, try to solve this one. 
+
+
+11 - 2x2 Ravens Progressive Matrix I.txt
+Okay, here are some two by two problems. Two by two matrix problems. The situation is somewhat similar, this time it is not just that A is to B as C is to D but 
+
+
+12 - 2x2 Ravens Progressive Matrix II.txt
+Okay, here is a slightly harder problem. Why don't we all try to solve it? 
+
+
+13 - 2x2 Ravens Progressive Matrix III.txt
+Let us try one more problem 
+
+
+14 - 3x3 Ravens Progressive Matrix I.txt
+Now let us look at some G and H in the third row. We do not know what constraints, rows,columns and diagonals, which would be the correct choice among 
+
+
+15 - 3x3 Ravens Progressive Matrix II.txt
+Okay, let's try a harder one. I can tell you that choices to the right. 
+
+
+16 - Exercise What is intelligence.txt
+If you are designing a AI agent they aren't themselves intelligent, they are just processing signals and 
+
+
+17 - Principles of CS7637.txt
+Our discussion of knowledge-based knowledge into knowledge structures. Principle number two, top down not just bottom up. We just don't reason from data, we also use data to pull of different methods. We'll also discuss several tasks. Later, we'll discuss how AI agents can select specific methods to find optimal solutions. This is because of a trade off solutions that are just good enough. Principle number six, agents make use of recurring memory constrain and support each other. We'll build theories that are not again in this particular class. So we highly recommend that you 
+
+
+18 - Readings.txt
+Throughout this course, we will be by Patrick Winston. Knowledge Systems by Mark Stefik, knowledge beyond what we'll discuss in this class, you may want to 
+
+
+19 - Wrap Up.txt
+Today we started off by discussing called computational psychometrics, the application of computer models to this course, so we hope you're excited to get started. We're going to start off with 
+
+
+20 - The Cognitive Connection.txt
+Let us look at a connection between the science of building agents that can take the same tests of Ravens test, in principle [INAUDIBLE] psycho-metrics will also look at Raven's Test of Intelligence. It is also interesting to note that intelligence as the neurotypical people. Note that Raven's test of the thinking strategies that people with autism are better aligned 
+
+
+21 - Final Quiz.txt
+And now to the quiz at 
+
+

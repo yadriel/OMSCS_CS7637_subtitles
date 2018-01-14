@@ -1,0 +1,76 @@
+01 - Preview.txt
+Today, we'll talk about a very general method called generate and test. We have looked at knowledge representations like semantic networks. We'll shift our attention now to problem solving methods. Generate and test is a problem solving method. This is another item in our fundamental topics part of the course. The generate and test method in a way, is very simple. Given a problem, generate potential solutions to it, and then test the solutions for the efficiency for addressing the problem. If you had complete knowledge of the world, complete and correct knowledge of the world. If you had infinite computational resources. And if you had a method of reasoning that was guaranteed to be correct, then you can generate the correct, the optimal solution. You don't need to test it. In general however, you do not have complete or correct knowledge of the world. You do not have infinite computational resources, and not all methods are guaranteed to be correct. In that case, you can generate potential solutions. Plausible solutions, and then test them. Estimates that will generate, and test. We will use this method in conjunction with semantic networks, or the prisoners and guards problem that we discussed last time. 
+
+
+02 - Guards and Prisoners.txt
+Knowledge-based AI is a collection of three things. Knowledge representations, problem solving techniques and architectures. We have already look at one knowledge representation, semantic networks. We have not so far looked at problem solving methods or architectures. Today, I'd like to start by talking about the problem solving method. Let us illustrate the problem solving method of generate and test with the same examples that we have discussed earlier. When we were discussing this example in the case of semantic networks, we simply came up with various states and pruned some of them without saying about how an AI agent would know what states to prune. So imagine that we have a generator that takes the initial state and from that initial or current state, generates all the possible successive states. For now, imagine it's not a very smart generator, it's a dumb generator. So it generates all the possible states. So the generator test method not only has a generator but also has a tester. The tester looks at all the possible states the generator has generated and removes some of them. For now, let's also assume that the tester is is dumb as well. And so the tester is removes only those states that are are clearly illegal based on the specific of the problem. Namely, that one cannot have more prisoners than guards on either back. So the first and the third states are removed by the tester. 
+
+
+03 - Exercise Generate and Test I.txt
+Let us continue with this exercise one step further. So now we have three successor states to the initial state. Given these three successor states, what states might the dumb generator generate next? 
+
+
+04 - Exercise Generate and Test I.txt
+So from the top state we have three possible next states. We can move both of them, we can move just the prisoner, or we can move just the guard. From this one we can either move one prisoner or two prisoners, and from this one all we can really do is move the prisoner back over to the left. Remember that David is not generating these successive states. David is saying that the DOM generator will generate the successive states. 
+
+
+05 - Exercise Generate and Test II.txt
+So now that we have all of these states that the generator has generated, given that we have a dump tester what states will the dump tester dismiss? 
+
+
+06 - Exercise Generate and Test II.txt
+So the only one of these six states that disobeys our one rule against having more prisoners than guards on either shore, is this state over here. So, that's the only state that's going to get thrown out. These five states are all legal according to our dumb testers understanding of the problem. So after we dismiss that state, though. We'll notice that we only have two unique states, we have everyone on the left coast and one prisoner on the right coast. So like we did earlier, we can collapse these two down into only these two states. It won't matter how we got there, once we're there. 
+
+
+07 - Dumb Generators, Dumb Testers.txt
+Now we can continue to apply this method of generate and test iteratively. So we can apply it on this state and that state and see what successor states we get. If we do so, then we get a very large number of successor states. This is a problem of call many total explosion. While one was tasked with a small number of states, but the number of successor states keeps on increasing very rapidly. Now, the reason it is occurring here and it did not occur when we are talk, dealing with semantic networks is because here we have states like this one which have three guards and three prisoners on the same side of the bank, exactly the same state that was the initial state to begin with. This is because we have a dumb generator and a dumb tester. So this state never got pruned away, although this particular state is identical to the initial state that we started from. This method of generating test, even with a dumb generator and a dumb tester, if applied iteratively could finally lead to the goal state. In which case, we will have a path from the initial state all the way to the goal state, but this will be computationally very inefficient. This is because we have a dumb generator and a dumb tester. So the question now becomes, can we make a smarter generator and a smarter tester? Before we make a smarter generator and a smarter tester, we should note that generate and test is a very powerful problem solving method. 
+
+
+08 - Smart Testers.txt
+So suppose that we have a smarter tester, a tester which can detect when any state is identical to a previously visited state. In that case the tester may decide that this, this, and this state are identical to the initial state and therefore dismiss them. The tester also dismisses this state, as usual, because of the problem specification that one cannot have more prisoners than guards on any one bank. This leaves the following state of affairs. Note also that this particular state has no successor states, all successor states of this have been ruled out. Therefore this particular part clearly is not a good path to get to the gold state. If we notice also, that these two states are identical, then we can merge them. If we do so, then we get exactly the same kind of configuration of states that we had when we were dealing with the semantic network in the previous lesson. There is something to note here. We had this semantic network in the last lesson, but the knowledge representation of semantics network, while very useful, by itself and of itself doesn't solve any problems. You need a problem solving method that uses knowledge afforded by the knowledge representation to actually do the problem solving. Generating test is one of those problem solving methods. In general, when we do problem solving or reasoning, then there is a coupling between a knowledge representation and a problem solving method, like semantic networks and generating test. What we did so far had a dumb generator, but we made the testers smarter. The testers started looking for what states had been repeated. Alternatively we can shift the balance of responsibility between them and make the generator smarter. Let's see how that might happen. 
+
+
+09 - Smart Generators.txt
+Instead of the generator generating all the successive states and then a tester finding out that this state, this state and this state are identical to the initial state. One could make the generator itself smarter and say that a generator will not even generate these three states, but it will know that it should not generate states that are already up here. This means that we can either provide the generator with some additional abilities or the tester with some additional abilities or both. If the generator was smarter, then it would not even generate these three states because they are nonproductive. I would exclude maybe the tester, the determinant of this state is illegal and therefore dismisses it. We could even go one step further and make the generator even smarter, so the generator will not generate this particular state. And thus, the balance within the generator and the tester can shift depending on where we try to put knowledge. For this problem, for this relatively simple and small problem, the balance will responsibility between the generator and test might look like a tree relationship. But imagine a problem in if there are a million such states. Then whether we have generated very smart or the tests are very smart or both can become a important issue. Despite that, genetic testing factors are a very popular method used in some schools of AI. Genetic algorithms, for instance, can be viewed as genetic [INAUDIBLE]. Given a number of states, they try to find out all the potential successive states that are possible, given some simple rules of recombination. And then of a fitness function that acts as a tester. Genetic algorithms, therefore, are an effective method for a very large number of problems. They're also a very inefficient method because neither the generator nor the testing generator algorithms are especially smart. 
+
+
+10 - Discussion Smart Generators and Testers.txt
+Recall that we had this state any state where there is only one person on the side of the river that any time only one person is on the side of the river with the boat, 
+
+
+11 - Discussion Smart Generators and Testers.txt
+David is right. The tester could, in fact, test and dismiss the state using the the generator say, I don't need to ever generate a state that involves sending of where do we draw the balance of responsibility between 
+
+
+12 - Generate  Test for Ravens Problems.txt
+Let us return to our problem from the intelligence test to see how generate and test might apply as a problem solving method. Again, here is a problem that we encountered earlier. Notice that this is a more complicated problem than the guards and prisoners problem. Here is why. In case of the guards and prisoner problem, each transformation from one state to another, was a discrete transformation. One could take a certain number of guards to the other side. One could take a certain number of prisoners to the other side, or one could take a certain of number of guards and prisoners to the other side. In this case, if I look at the approximation between A and B, and I notice that the diamond inside the circle is now outside the circle and is larger. Now suppose I were to try the same transformation from C to D. So I can look at the circle inside the triangle, put it outside, and also make it larger. I notice that when I put it outside, I can put it outside right next to the triangle, a little bit farther, a little bit farther, a little bit farther away. I can make it the same size, or a little larger, or a lot larger. Increase its size by % or % or %. So this space of possibilities here is very large. So for problems of this kind, the need for a smarter generator and a smarter tester is critical, because this space of possibilities can become very large, very quickly. 
+
+
+13 - Semantic Networks for Generate and Test.txt
+This is where the knowledge y could have been displaced here or a little bit further, it could have been that is all that matters. An important point to note here is are at a low level of detail. And therefore the problem-solving the problem solving method coupled together that solve the problem, 
+
+
+14 - Generate  Test for Ravens Problems II.txt
+So let's assume that we're using transfer that transformation to C and use it to generate my answer for D. I then take my answer for D and compare to be the correct answer, it has to meet the generated answer earlier where either the middle shape disappeared or from C to D and then test it against all six choices and then find out, which one of these transformations is closest some knowledge about the world at a level of abstraction. It is coupled with problem 
+
+
+15 - Assignment Generate  Test.txt
+So how would you use generate and test to actually solve approach you've seen today. We talked about a couple how you would actually implement it. In doing so, make sure to think of explode very quickly. Also make sure to think about how you're would use that information to generate what you 
+
+
+16 - Wrap Up.txt
+Let's wrap up our topic for today. So today, we engage very naturally. We talked about strong generators and tests is more difficult and unconstrained domains and today with generate and test. Means and analysis and 
+
+
+17 - The Cognitive Connection.txt
+Let us examine the relationship computational resources. And we also do not always have the notion of genetic algorithms. Genetic algorithms are inspired by of the genetical test method. First, genetic solutions, 
+
+
+18 - Final Quiz.txt
+Once again, will you please complete 
+
+
+19 - Final Quiz.txt
+Great. Thank you so much for your feedback. 
+
+
